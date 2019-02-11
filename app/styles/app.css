@@ -16,7 +16,7 @@ body{
     background : #f6f6f6;        
 }
 
-.shops.list-table {
+.shop.list-table {
     padding: 20px 20px 150px;
 }
 
@@ -37,7 +37,7 @@ body{
 
 .list-table-row:not(:first-child), 
 .list-table-row:not(:last-child),
-.shops .list-table-row {
+.shop .list-table-row {
     border-bottom: 1px solid #e3e3e3;
 }
 

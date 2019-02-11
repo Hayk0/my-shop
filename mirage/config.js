@@ -8,7 +8,7 @@ export default function() {
         {  name: 'ZARA' },
         {  name: 'MANGO' },
         {  name: 'MASSIMO DUTY' },
-        {  name: 'VERNISAJ' },
+        {  name: 'BERSHKA' },
       ]
     }
   }); 
