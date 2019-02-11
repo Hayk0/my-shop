@@ -1,0 +1,75 @@
+zzzz
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.shop-wrapper {
+    padding: 100px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.list-table{
+    border: 2px dotted #a0a0a0;
+    border-radius: 10px;    
+    background : #f6f6f6;        
+}
+
+.shops.list-table {
+    padding: 20px 20px 150px;
+}
+
+.list-table-header {
+    border-bottom : 2px dotted #a0a0a0;
+}
+
+.list-table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-table-row.shop > .list-table-col:nth-child(2) {
+    border-right: 2px dotted #a0a0a0;
+    border-left: 2px dotted #a0a0a0;
+}
+
+.list-table-row:not(:first-child), 
+.list-table-row:not(:last-child),
+.shops .list-table-row {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.list-table-col {
+    padding : 10px 30px;
+}
+
+.list-table-col:not(:nth-child(2)) {
+    flex-basis: 200px;
+}
+
+.button {
+ padding : 10px;
+ color : #fff;
+ font-weight: 500;
+ border : none;
+}
+
+.button:hover{ cursor: pointer; }
+
+.button.success { background: #66c066; }
+
+.button.success:hover { background: #449d44; }
+
+.button.warning { background: #f2b658; }
+
+.button.warning:hover { background: #f0ad4e; }
+
+.button.danger { background: #de5e5a; }
+
+.button.danger:hover { background: #c9302c; }
+
+.button.primary { background: #3a85bf; }
+
+.button.primary:hover { background: #337ab7; }
