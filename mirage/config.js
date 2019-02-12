@@ -1,17 +1,7 @@
 export default function() {
 
-  this.namespace = '/api';
-  this.get('/shop', function() {
-
-    return {
-      shop : [
-        {  name: 'ZARA' },
-        {  name: 'MANGO' },
-        {  name: 'MASSIMO DUTY' },
-        {  name: 'BERSHKA' },
-      ]
-    }
-  }); 
+  this.namespace = 'api';
+  this.get('/shops')
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
