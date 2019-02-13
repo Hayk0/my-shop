@@ -1,7 +1,5 @@
-{{outlet}}
-
-
-{{!-- <div class="shop-wrapper">
+<div class="shop-wrapper">
+    <h1 align="center">Shops / {{model.name}}</h1>
     <div class="list-table">
         <div class="list-table-header">
             <div class="list-table-row shop">
@@ -12,15 +10,17 @@
         </div>
         <div class="list-table-body">
             <div class="list-table-row shop">
-                <div class="list-table-col">{{shop.name}}</div>
-                <div class="list-table-col">QTY</div>
-                <div class="list-table-col">Price</div>            
-            </div>
-            <div class="list-table-row shop">
-                <div class="list-table-col">{{shop.name}}</div>
+                <div class="list-table-col">{{model.name}}</div>
                 <div class="list-table-col">QTY</div>
                 <div class="list-table-col">Price</div>            
             </div>
         </div>
     </div>
-</div> --}}
+    <div class="add-new-item-box">
+        <button 
+            class="add-new-item-button"
+            {{!-- {{action "createProduct"}} --}}
+        >Add Shop
+        </button>
+    </div>
+</div>

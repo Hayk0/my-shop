@@ -56,7 +56,8 @@ body{
  border : none;
 }
 
-.button:hover{ cursor: pointer; }
+.button:hover, 
+.add-new-item-button:hover{ cursor: pointer; }
 
 .button.success { background: #66c066; }
 
@@ -73,3 +74,15 @@ body{
 .button.primary { background: #3a85bf; }
 
 .button.primary:hover { background: #337ab7; }
+
+.add-new-item-box{
+    padding : 20px 0;
+}
+
+.add-new-item-button {
+    padding: 10px 40px;
+    background: #000;
+    border: none;
+    border-radius: 0;
+    color : #fff;
+}
