@@ -86,3 +86,7 @@ body{
     border-radius: 0;
     color : #fff;
 }
+
+.input {
+    padding : 8px;
+}

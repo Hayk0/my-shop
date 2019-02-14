@@ -6,21 +6,14 @@
                 <div class="list-table-col">Name</div>
                 <div class="list-table-col">QTY</div>
                 <div class="list-table-col">Price</div>            
+                <div class="list-table-col">Actions</div>            
             </div>
         </div>
         <div class="list-table-body">
-            <div class="list-table-row shop">
-                <div class="list-table-col">{{model.name}}</div>
-                <div class="list-table-col">QTY</div>
-                <div class="list-table-col">Price</div>            
-            </div>
+            {{#each this.model as |product|}}
+                {{shop/product-item product=product}}
+            {{/each}}
         </div>
     </div>
-    <div class="add-new-item-box">
-        <button 
-            class="add-new-item-button"
-            {{!-- {{action "createProduct"}} --}}
-        >Add Shop
-        </button>
-    </div>
+    {{shop/add-product}}
 </div>

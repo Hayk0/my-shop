@@ -1,7 +1,7 @@
 <div class="list-table-row">
     <div class="list-table-col">
         {{#if editMood}}
-            {{input value=name  placeholder="Name"}}
+            {{input value=name  placeholder="Name" class="input"}}
         {{else}}
         {{#link-to "shop.products" shop.id}}    
             {{shop.name}}
