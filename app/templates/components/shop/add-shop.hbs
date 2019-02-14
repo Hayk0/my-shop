@@ -6,10 +6,16 @@
     >Add Shop
     </button>
     {{/unless}}
-
+    {{#if success}}
+        <span>{{successMessage}}</span>
+    {{/if}}
+    {{#if error}}
+        <span>{{errorMessage}}</span>
+    {{/if}}
     {{#if editMood}}
         <button class="button success" {{action "addNewShop"}} disabled={{disabled}}>Create</button>
         <button class="button warning"{{action "changeEditMood"}}>Cancel</button>
         {{input value=name class="input" placeholder="Name"}}
     {{/if}}
+    
 </div>

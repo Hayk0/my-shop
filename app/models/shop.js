@@ -4,7 +4,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
     name: DS.attr('string'),
-    shop: DS.hasMany('products'),
+    shop: DS.hasMany('product'),
     // totalPrice: computed('products.@each.{price,qty}', function () {
     //     let products = this.get('products');
     //     return products.reduce(function(previousValue, product){

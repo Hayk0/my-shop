@@ -7,15 +7,27 @@ export default Component.extend({
     editMood : false,
     name : '',
     disabled : equal('name', ''),
+    successMessage : 'Shop was added successfully!',
+    success : false,
+    errorMessage : 'Error, try again!',
+    error : false,
     actions : {
         changeEditMood() {
             this.toggleProperty('editMood');
         },
         addNewShop() {
-            let newShopRecord = this.store.createRecord('shop', {name : this.get('name')});
+            const newShopRecord = this.get('store').createRecord('shop', {name : this.get('name')});
             newShopRecord.save()
-                .then(res => console.log(res))
-                .catch(e => console.log(e));
+                .then(res => {
+                    this.set('name', '');
+                    this.toggleProperty('success');
+                    this.toggleProperty('editMood');
+                    setTimeout(() => this.toggleProperty('success'), 3000);
+                })
+                .catch(e => {
+                    this.toggleProperty('error');
+                    setTimeout(() => this.toggleProperty('error'), 3000);
+                });
         }
     }
 });

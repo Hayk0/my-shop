@@ -12,6 +12,8 @@
         <div class="list-table-body">
             {{#each this.model as |product|}}
                 {{shop/product-item product=product}}
+                {{else}}
+                <p align="center">There is no product, You can add it!</p>
             {{/each}}
         </div>
     </div>
