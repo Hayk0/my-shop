@@ -26,7 +26,7 @@ export default Component.extend({
             newProductRecord.save()
                 .then(res => {
                     console.log(res)
-                    this.toggleProperty('success');
+                    this.toggleProperty('success'); 
                     this.toggleProperty('editMood');
                     this.set('name', '');
                     this.set('qty', '');

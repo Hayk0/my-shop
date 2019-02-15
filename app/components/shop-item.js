@@ -35,16 +35,7 @@ export default Component.extend({
                     const self = this;
                     self.toggleProperty('error');
                     setTimeout(() => self.toggleProperty('error'), 3000);
-                });
-            // if(shop) {
-            //     shop.setProperties({
-            //         name: this.get('name'),
-            //         qty: this.get('qty'),
-            //         price: this.get('price')
-            //     })
-            //     shop.save()
-            // }
-            
+                });            
         }
     }
 });
