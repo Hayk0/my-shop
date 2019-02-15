@@ -9,12 +9,18 @@
         {{/if}}
     </div>
     <div class="list-table-col">
+        {{#if success}}
+            <span>{{successMessage}}</span>
+        {{/if}}
+        {{#if error}}
+            <span>{{errorMessage}}</span>
+        {{/if}}
         {{#if editMood}}
-            <button class="button success" {{action "changeEditMood"}} disabled={{disabled}}>Save</button>
+            <button class="button success" {{action "editShop" shop.id}} disabled={{disabled}}>Save</button>
             <button class="button warning" {{action "changeEditMood"}}>Cancel</button>            
         {{else}}
             <button class="button primary" {{action "changeEditMood"}}>Edit</button>
-            <button class="button danger">Delete</button>                    
+            <button class="button danger" {{action "deleteShop" shop.id}}>Delete</button>                    
         {{/if}}
     </div>
 </div>
