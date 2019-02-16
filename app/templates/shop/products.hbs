@@ -11,11 +11,11 @@
         </div>
         <div class="list-table-body">
             {{#each this.model as |product|}}
-                {{shop/product-item product=product}}
+                {{shop/product-item product=product shopId=model.id}}
                 {{else}}
                 <p align="center">There is no product, You can add it!</p>
             {{/each}}
         </div>
     </div>
-    {{shop/add-product}}
+    {{shop/add-product shopId=model.id}}
 </div>

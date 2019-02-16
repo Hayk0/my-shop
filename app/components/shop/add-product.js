@@ -17,26 +17,17 @@ export default Component.extend({
         changeEditMood() {
             this.toggleProperty('editMood');
         },
-        addNewShop() {
-            const newProductRecord = this.store.createRecord('product', {
-                name : this.get('name'),
-                qty : this.get('qty'),
-                price : this.get('qty')
-            });
-            newProductRecord.save()
-                .then(res => {
-                    console.log(res)
-                    this.toggleProperty('success'); 
-                    this.toggleProperty('editMood');
-                    this.set('name', '');
-                    this.set('qty', '');
-                    this.set('price', '');
-                    setTimeout(() => this.toggleProperty('success'), 3000);
-                })
-                .catch(err => {
-                    this.toggleProperty('error');
-                    setTimeout(() => this.toggleProperty('error'), 3000);                                        
-                });
+        addNewShop(shopId) {
+            const self = this;
+            const currentShop = self.get('store').peekRecord('shop', shopId);
+            currentShop.products.pushObject(self.store.createRecord('product', {
+                name: self.get('name'),
+                qty: self.get('qty'),
+                price: self.get('price'),
+            }))
+            // currentShop.save(res => console.log(res.products.get('firstObject')) )
+
+            console.log(currentShop.products)
         }
     }
 });

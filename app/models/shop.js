@@ -1,10 +1,10 @@
 import DS from 'ember-data';
-// import { computed } from '@ember/object';
+const {attr, hasMany, Model} = DS;
 
 
-export default DS.Model.extend({
-    name: DS.attr('string'),
-    shop: DS.hasMany('product'),
+export default Model.extend({
+    name: attr('string'),
+    products: hasMany('product'),
     // totalPrice: computed('products.@each.{price,qty}', function () {
     //     let products = this.get('products');
     //     return products.reduce(function(previousValue, product){
