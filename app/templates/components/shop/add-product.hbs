@@ -14,7 +14,7 @@
     {{/if}}
 
     {{#if editMood}}
-        <button class="button {{if this.disabled 'disabled' 'success'}}" {{action "addNewShop" shopId}} disabled={{disabled}}>Create</button>
+        <button class="button {{if this.disabled 'disabled' 'success'}}" {{action "addNewShop" model}} disabled={{disabled}}>Create</button>
         <button class="button warning"{{action "changeEditMood"}}>Cancel</button>
         {{input value=name class="input" placeholder="Name"}}
         {{input value=qty class="input" placeholder="QTY"}}
