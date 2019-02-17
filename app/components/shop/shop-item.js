@@ -15,7 +15,7 @@ export default Component.extend({
     changeEditMood() {
       const self = this;
       self.set('notification', '');
-      this.toggleProperty('editMood');
+      self.toggleProperty('editMood');
     },
 
     editShop(id) {
